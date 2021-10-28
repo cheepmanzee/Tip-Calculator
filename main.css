@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ddd;
+}
+
+input {
+    font-family: inherit;
+    font-size: 1.3rem;
+    text-align: right;
+    outline: none;
+    width: 180px;
+}
+
+.tracker {
+    background-color: #fff;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    height: 220px;
+}
+
+.tracker__count {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.count__bill, .count__people {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.count__tip {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(2, 50px);
+}
+
+.tip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.tip > input {
+    height: 50px;
+    width: 50px;
+}
+
+
+.tracker__total {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.total__total, .total__tip {
+    font-size: 1.2rem;
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#reset {
+    font-family: inherit;
+    font-size: 1.5rem;
+}
+
+@media (max-width:768px) {
+    body {
+        height: auto;
+        width: auto;
+    }
+    .tracker {
+        height: auto;
+        flex-direction: column;
+    }
+    .tracker__count {
+        height: 250px;
+        width: auto;
+    }
+    .count__tip {
+        grid-template-columns: repeat(3, 60px);
+        grid-template-rows: repeat(2, 50px);
+    }
+    #people, #bill {
+        width: 90px;
+    }
+    .count__tip {
+        margin: 0 auto;
+    }
+    .total__total,.total__tip {
+        width: 100%;
+    }
+}

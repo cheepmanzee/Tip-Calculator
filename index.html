@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Tracker v2</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <main class="tracker">
+        <form class="tracker__count">
+            <div class="count__bill">
+                <label for="bill">Bill</label>
+                <input type="number" id="bill" min="1" value="0">
+            </div>
+            <div class="count__tip">
+                <div class="tip">
+                    5%
+                    <input type="radio" value="0.05" name="tip" id="5" checked>
+                </div>
+                <div class="tip">
+                    10%
+                    <input type="radio" value="0.10" name="tip" id="10">
+                </div>
+                <div class="tip">
+                    15%
+                    <input type="radio" value="0.15" name="tip" id="15">
+                </div>
+                <div class="tip">
+                    25%
+                    <input type="radio" value="0.25" name="tip" id="25">
+                </div>
+                <div class="tip">
+                    50%
+                    <input type="radio" value="0.50" name="tip" id="50" placeholder="50%">
+                </div>
+            </div>
+            <div class="count__people">
+                <label for="people">People</label>
+                <input type="number" id="people" min="1" value="1">
+            </div>
+        </form>
+        <div class="tracker__total">
+            <div class="total__total">
+                <p>Total</p>
+                <p class="total">$0</p>
+            </div>
+            <div class="total__tip">
+                <p>Tip</p>
+                <p class="tip__tip">$0</p>
+            </div>
+            <button type="reset" id="reset">Reset</button>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
